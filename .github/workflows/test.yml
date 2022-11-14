@@ -23,6 +23,6 @@ jobs:
          
       - name: check output
         run:
-         echo $GH_TOKEN
+         echo $test
        
           #issue_date=$(jq '.[] | .url' <<< $env.active_issue_list | tr -d '"')
