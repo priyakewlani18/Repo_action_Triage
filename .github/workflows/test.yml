@@ -18,7 +18,7 @@ jobs:
       - run:
           #echo $(gh issue list --label "Incident" --label "Active" --json "url" | jq '.[] | .url' | tr -d '"')
           #echo $(gh issue list --label "Incident" --label "Active" --json "url")
-          echo "test=hello" >> $GITHUB_ENV
+          echo "test=$(gh issue list --label "Incident" --label "Active" --json "url")" >> $GITHUB_ENV
          #echo "active_issue_list=$(gh issue list --label "Incident" --label "Active" --json "url" )" >> $GITHUB_ENV
          
       - name: check output
