@@ -23,7 +23,7 @@ jobs:
          
       - name: check output
         run:
-         check=$(echo $test | jq '.[] | .url' | tr -d '"')
-         echo $check
+         echo $(echo $test | jq '.[] | .url' | tr -d '"')
+
        
           #issue_date=$(jq '.[] | .url' <<< $env.active_issue_list | tr -d '"')
